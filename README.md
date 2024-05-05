@@ -1,2 +1,2 @@
-# Advanced-C-Programming-Miniprojects
+# Advanced C Programming Miniprojects
 An extension from the previous repository 'C Programming Miniprojects', which explores more advanced concepts and techniques available in the C programming language.
