@@ -1,7 +1,9 @@
+// Author: Harry Moss
+// Date: 08.05.2024
+
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Function declarations. */
 int isEven(const int);
 int isPrime(const int);
 
@@ -14,13 +16,13 @@ int main(void)
 
    if(fPtrIn == NULL)
    {
-        /* Unable to open file hence exit. */
+        // Unable to open file hence exit.
         printf("Unable to open file.\n");
         printf("Please check privilegas and that the file exists.\n");
         exit(EXIT_FAILURE);
    }
 
-   /* File open success message. */
+   // File open success message.
    printf("File opened successfully. Reading integers from file. \n\n");
 
    /*
@@ -37,7 +39,7 @@ int main(void)
        else
            printf("Odd number found: %d\n", num);
 
-      /* Read another integer and store read status in success. */
+      // Read another integer and store read status in success.
       success = fscanf(fPtrIn, "%d", &num);
 
     } while(success != -1);
@@ -49,7 +51,7 @@ int main(void)
 
 /**
  * Checks whether a given number is even or not. The function
- * returns 1 if the number is odd, otherwise it returns 0.
+ * Returns 1 if the number is odd, otherwise it returns 0.
  */
 int isEven(const int num)
 {
@@ -65,7 +67,7 @@ int isPrime(const int num)
 {
     int i = 0;;
 
-    /* Only positive integers are prime. */
+    // Only positive integers are prime.
     if (num < 0)
         return 0;
 
