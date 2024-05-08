@@ -24,11 +24,11 @@ int convertBinaryToDecimal(long long n)
 
     while (n != 0)
     {
-        /* get the last digit */
+        // Get the last digit
         remainder = n % 10;
-        /* reprocess n */
+        // Reprocess n
         n = n / 10;
-        /* running tally */
+        // Running tally
         decimalNumber += remainder * pow(2,i);
         ++i;
     }
