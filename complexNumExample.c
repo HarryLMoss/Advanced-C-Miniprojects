@@ -8,13 +8,13 @@
 
 int main(void)
 {
+// Check if compiler supports complex numbers with preprocessor macros
 #ifdef __STDC_NO_COMPLEX__
     printf("complex not supported\n");
     exit(1);
 #else
     printf("complex numbers are supported\n");
 #endif
-
 
     complex double z1 = 2.5 + 3.0i;
     complex double z2 = 2.5 - 4.0i;
