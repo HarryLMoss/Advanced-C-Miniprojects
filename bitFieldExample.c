@@ -1,17 +1,20 @@
-#include <stdio.h>
-#include <stdbool.h> //C99, defines bool, true, false
+// Author: Harry Moss
+// Date: 08.05.2024
 
-/* line styles     */
+#include <stdio.h>
+#include <stdbool.h>     // C99, defines bool, true, false
+
+// Line Styles
 #define SOLID   0
 #define DOTTED  1
 #define DASHED  2
 
-/* primary colors  */
+// Primary Colours
 #define BLUE    4
 #define GREEN   2
 #define RED     1
 
-/* mixed colors    */
+// Mixed Colours
 #define BLACK   0
 #define YELLOW  (RED | GREEN)
 #define MAGENTA (RED | BLUE)
@@ -20,26 +23,26 @@
 
 const char *colours[8] = {"black", "red", "green", "yellow", "blue", "magenta", "cyan", "white"};
 
-/* Declare bitfields in box properties struct */
+// Declare bitfields in box properties struct
 struct boxProps
 {
     bool opaque :               1;
     unsigned int fillColour :   3;
-    /* Pad 4 bits with unnamed variable */
+    // Pad 4 bits with unnamed variable
     unsigned int :              4;
     bool showBorder :           1;
     unsigned int borderColour : 3;
     unsigned int borderStyle :  2;
-    /* Pad as before */
+    // Pad as before
     unsigned int :              2;
 };
 
-/* showSettings function avoids duplication of code */
+// showSettings function avoids duplication of code
 void showSettings(const struct boxProps *boxPointer);
 
 int main(void)
 {
-    /* Create and initialize boxProps struct */
+    // Create and initialise boxProps struct
     struct boxProps box = {true, YELLOW , true, GREEN, DASHED};
 
     printf("Original box settings:\n");
