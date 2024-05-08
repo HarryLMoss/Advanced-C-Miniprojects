@@ -1,3 +1,6 @@
+// Author: Harry Moss
+// Date: 08.05.2024
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -22,12 +25,12 @@ int main(int argc, char *argv[])
     }
     else 
     {
-    /* If argument is neither, user has run program incorrectly */
+    // If argument is neither, user has run program incorrectly
         fprintf(stderr, "Usage: %s [filename]\n", argv[0]);
         exit(EXIT_FAILURE);
     }
 
-    /* Read from file. inc word count only for spaces & line feed */
+    // Read from file and include word count for spaces & line feed
     while(ch != EOF)
     {
         if(ch == ' ' || ch == '\n')
